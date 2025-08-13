@@ -1,7 +1,7 @@
 from edgar import Edgar
 from helpers import EDGAR_BASE_URL, fetch_latest_filing, validate_cik
 
-user_agent = 'ABC'  # specify a user agent as anything so the API can identify your requests
+user_agent = 'ABC'
 cik = validate_cik('0001045810')
 with Edgar(user_agent) as edgar:
     response = edgar.get_submissions(cik)
